@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Style -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <title>Pet Passport</title>
+</head>
+
+<body class="normal-body">
+
+    <header>
+        <nav class="navbar navbar-expand navbar-pet justify-content-between">
+            <a class="navbar-brand" href="#">
+                <ion-icon class="svg-icon" style="font-size: 28px;" name="arrow-back-outline"></ion-icon>
+                <span class="svg-icon back-text">Atrás</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="notification_modal(event)">
+                                <ion-icon name="notifications-outline" style="font-size: 28px;"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+                                <ion-icon name="person-circle-outline" style="font-size: 28px;"></ion-icon>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <div class="top-container">
+                                    <div class="change-img-container">
+                                        <img onclick=""
+                                            src="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
+                                            class="img-fluid d-block animal-photo change_photo" width="70">
+                                    </div>
+
+                                    <div class="ml-2">
+                                        <h5 class="profile-name">
+                                            Nombre
+                                        </h5>
+                                        <p class="user-type">Tipo 1</p>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    function password_modal(event) {
+                                        $('#passwordModal').modal('show');
+                                        event.preventDefault();
+                                    }
+                                </script>
+
+                                <a class="dropdown-item" href="#" onclick="password_modal()">
+                                    <ion-icon class="svg-icon" name="key-outline"></ion-icon>
+                                    <span class="svg-icon">Cambiar contraseña</span>
+                                </a>
+
+                                <a class="dropdown-item" href="change_data.php">
+                                    <ion-icon class="svg-icon" name="clipboard-outline"></ion-icon>
+                                    <span class="svg-icon">Cambiar datos</span>
+                                </a>
+
+                                <a class="dropdown-item" href="logout.php">
+                                    <ion-icon class="svg-icon" name="power-outline"></ion-icon>
+                                    <span class="svg-icon">Cerrar sesión</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+        <div class="col-md-6 mx-auto" style="margin-top: 30px; margin-bottom: 30px;">
+            <form action="#" method="post">
+                <h3>Programar una cita</h3>
+
+                <div class="alert alert-success" role="alert">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon> Mensaje
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Motivo</label>
+                    <input type="text" class="form-control" id="reason" name="reason"
+                        placeholder="Ej: Control de vacunas" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descripción (opcional)</label>
+                    <input type="text" class="form-control" id="description" name="description"
+                        placeholder="Ingrese una descripción" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" class="form-control" id="date" name="date" value="2010-01-01" min="2021-01-01"
+                        max="2137-12-31" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Hora</label>
+                    <input type="time" class="form-control" id="time" name="time" required>
+                </div>
+
+                <input type="submit" class="btn btn-lg btn-primary btn-block btn-shadow" value="Enviar" />
+
+            </form>
+        </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <script src="js/page/account.js"></script>
+</body>
+
+</html>

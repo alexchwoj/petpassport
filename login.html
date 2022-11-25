@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Style -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <title>Pet Passport</title>
+</head>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+</style>
+
+<body class="login-body" style="padding-bottom: 0px !important;">
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <form action="#" method="post" class="form-signin" style="animation: fadeIn; animation-duration: 2s;">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="images/pet.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-bold">Pet Passport</h1>
+            <p>Bienvenido a <b>Pet Passport</b>, ingrese sus credenciales para continuar.</p>
+
+            <div class="alert alert-danger" role="alert"><ion-icon name="bug-outline"></ion-icon> Mensaje de error</div>
+
+        </div>
+
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+            </div>
+            <input type="text" id="inputUser" name="username" class="form-control" placeholder="Usuario" required autofocus>
+        </div>
+
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <ion-icon name="key-outline"></ion-icon>
+                </div>
+            </div>
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Contraseña" required autofocus>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me" name="remember-me"> Mantener sesión
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-block btn-shadow">
+            <ion-icon class="svg-icon" name="enter-outline"></ion-icon>
+            <span class="svg-icon">Continuar</span>
+        </button>
+
+        <div class="dropdown lang-select text-center mt-3 mb-3">
+            <a class="btn dropdown-toggle" href="#" role="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="https://flagcdn.com/w20/es.png"/> Español
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="langDropdown">
+                <a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/es.png"/> Español</a>
+                <a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/gb.png"/> English</a>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(window).on('load', function() {
+            setTimeout(function(){ 
+                $('.preloader').addClass('preloader-deactivate');
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
